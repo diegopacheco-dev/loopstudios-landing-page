@@ -161,9 +161,14 @@ main {
     overflow: hidden;
 }
 
-.creation img {
+.creation__img {
     width: 100%;
     height: 100%;
+    transition: all .7s ease;
+}
+
+.creation:hover .creation__img  {
+    transform: scale(1.2);
 }
 
 .creation::after {
@@ -186,4 +191,58 @@ main {
     font-size: 1.5rem;
     font-weight: 400;
     z-index: 1;
+}
+
+.our-creations__btn {
+    width: 10rem;   
+    height: 2.8rem;
+    display: block;
+    margin: 2.5rem auto;
+    background-color: transparent;
+    border: solid 2px black;
+    font-weight: 700;
+}
+
+footer {
+    background-color: black;
+    margin-top: 6rem;
+}
+
+.footer-container {
+    width: var(--width);
+    margin: 0 auto;
+    padding: 3.8rem 0;
+    text-align: center;
+
+}
+
+.footer__logo {
+    width: 45%;
+}
+
+.footer__menu {
+    display: flex;
+    margin: 3.5rem 0;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__menu a {
+    color: white;
+    font-weight: 600;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+}
+
+.copyright {
+    color: white;
+    margin-top: 2rem;
+}
+
+.attribution {
+    padding: 1rem;
 }
