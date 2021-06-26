@@ -74,6 +74,11 @@ nav {
     position: absolute;
     width: 100%;
     background-color: black;
+    transition: all 0.3s ease-in;
+}
+
+.menu-active {
+    left: 0;
 }
 
 .navbar-menu {
@@ -86,10 +91,21 @@ nav {
     gap: 2rem;
 }
 
+.exit-btn {
+    position: absolute;
+    right: 1.4rem;
+    top: 3.2rem;
+}
+
 .navlink a{
     color: white;
     font-size: 1.5rem;
 }   
+
+.navlink a:hover {
+    border-bottom: solid 2px white;
+}
+
 
 .hero {
     height: 100%;

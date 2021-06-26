@@ -34,8 +34,11 @@
           <div class="navbar-logo">
             <img src="./images/logo.svg" alt="" />
           </div>
-          <div class="navbar-menu__wrapper">
-            <ul class="navbar-menu">
+          <div id="menu" class="navbar-menu__wrapper">
+            <div class="exit-btn" id="exitButton">
+              <img src="./images/icon-close.svg" alt="">
+            </div>
+            <ul  class="navbar-menu">
               <li class="navlink"><a href="">ABOUT</a></li>
               <li class="navlink"><a href="">CAREERS</a></li>
               <li class="navlink"><a href="">EVENTS</a></li>
@@ -44,8 +47,8 @@
             </ul>
           </div>
 
-          <div>
-            <img src="./images/icon-hamburger.svg" alt="" />
+          <div class="toggle-wrapper">
+            <img id="toggleButton" src="./images/icon-hamburger.svg" alt="" />
           </div>
         </div>
       </nav>
@@ -151,5 +154,8 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://ericksonder.github.io/personal-portfolio/">Diego Ericksond</a>.
     </div>
+
+
+    <script src="./main.js"></script>
   </body>
 </html>
