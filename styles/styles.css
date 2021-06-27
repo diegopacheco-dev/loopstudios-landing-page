@@ -91,6 +91,10 @@ nav {
     gap: 2rem;
 }
 
+.toggle-wrapper {
+    padding: 0.4rem;
+}
+
 .exit-btn {
     position: absolute;
     right: 1.4rem;
@@ -100,10 +104,16 @@ nav {
 .navlink a{
     color: white;
     font-size: 1.5rem;
+    text-transform: uppercase;
 }   
 
 .navlink a:hover {
     border-bottom: solid 2px white;
+}
+
+.navlink a:hover {
+    border-bottom: solid 2px white;
+    margin-bottom:  -2px;
 }
 
 
@@ -166,28 +176,71 @@ main {
     
 }
 
+
 .creations-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.3rem;
 }
 
+
+
 .creation {
     position: relative;
     overflow: hidden;
+    height: 10rem;
 }
 
-.creation__img {
-    width: 100%;
-    height: 100%;
-    transition: all .7s ease;
+
+
+.creation:nth-child(1) {
+    background-image: url('../images/mobile/image-deep-earth.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+.creation:nth-child(2) {
+    background-image: url('../images/mobile/image-night-arcade.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.creation:nth-child(3) {
+    background-image: url('../images/mobile/image-soccer-team.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.creation:nth-child(4) {
+    background-image: url('../images/mobile/image-grid.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.creation:nth-child(5) {
+    background-image: url('../images/mobile/image-from-above.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.creation:nth-child(6) {
+    background-image: url('../images/mobile/image-pocket-borealis.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.creation:nth-child(7) {
+    background-image: url('../images/mobile/image-curiosity.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.creation:nth-child(8) {
+    background-image: url('../images/mobile/image-fisheye.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.creation:hover .creation__img  {
-    transform: scale(1.2);
-}
 
-.creation::after {
+
+
+
+
+/* .creation::after {
     content: '';
     background-color: rgba(0, 0, 0, 0.35);
     position: absolute;
@@ -195,8 +248,9 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    
-}
+} */
+
+
 
 .creation__title {
     position: absolute;
@@ -205,8 +259,18 @@ main {
     color: white;
     width: 40%;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     z-index: 1;
+}
+
+.creation:hover {
+    opacity: 0.8;
+}
+
+.creation:hover .creation__title {
+    color: black;
+    font-weight: 700;
+    opacity: 1;
 }
 
 .our-creations__btn {
@@ -217,7 +281,18 @@ main {
     background-color: transparent;
     border: solid 2px black;
     font-weight: 700;
+    letter-spacing: 0.15rem;
 }
+
+.our-creations__btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.our-creations__header__btn {
+    display: none;
+}
+
 
 footer {
     background-color: black;
@@ -233,7 +308,7 @@ footer {
 }
 
 .footer__logo {
-    width: 45%;
+    width: 10rem;
 }
 
 .footer__menu {
@@ -246,6 +321,10 @@ footer {
 .footer__menu a {
     color: white;
     font-weight: 600;
+}
+
+.footer__menu a:hover {
+    border-bottom: solid 2px white;
 }
 
 .social-media {
@@ -262,3 +341,320 @@ footer {
 .attribution {
     padding: 1rem;
 }
+
+
+@media screen and (min-width: 500px) {
+    .creation {
+        height: 12rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        background-image: url('../images/desktop/image-hero.jpg');
+    }   
+
+    .hero {
+        justify-content: flex-start;
+        width: var(--width);
+        margin: auto;
+    }
+
+    .hero__title {
+        width: 70%;
+        font-size: 4rem;
+        padding: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 820px) {
+
+    .hero {
+        justify-content: flex-start;
+        width: var(--width);
+        margin: auto;
+    }
+
+    .hero__title {
+        width: 80%;
+        font-size: 5rem;
+    }
+
+    .navbar-menu__wrapper {
+        position: initial;
+        background-color: transparent;
+
+    }
+
+    .navbar-menu {  
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: auto;
+        gap: 0;
+        height: 5rem;
+    }
+
+    .navlink {
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    .navlink a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: initial;
+        padding: 0.5rem 1rem;
+    }
+
+    
+
+    .toggle-wrapper {
+        display: none;
+    }
+
+    .exit-btn {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .hero {
+        justify-content: flex-start;
+        width: var(--width);
+        margin: auto;
+    }
+
+    .hero__title {
+        width: 70%;
+        padding: 3rem;
+    }
+
+    .about-us {
+        display: flex;
+        align-items: flex-end;
+        padding: 6rem 0;
+    }
+
+    .about-us__img {
+        min-width: 65%;
+    }
+
+    .about-us__info {
+        min-width: 45%;
+        margin-left: -15%;
+        background-color: white;
+        padding: 1.5rem 3rem 0;
+        text-align: start;
+    }
+
+    .our-creations__title {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .about-us__text {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+ 
+    .our-creations__header__btn {
+        display: block;
+        margin: 0;
+    }
+
+
+
+    .our-creations__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 5rem 0 5rem; 
+        
+    }
+
+    .creations-container {
+        gap: 1.8rem;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 10rem;
+    }
+
+    .creation {
+        height: 28rem;
+    }
+
+    .creation:nth-child(1) {
+        background-image: url('../images/desktop/image-deep-earth.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(2) {
+        background-image: url('../images/desktop/image-night-arcade.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(3) {
+        background-image: url('../images/desktop/image-soccer-team.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(4) {
+        background-image: url('../images/desktop/image-grid.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(5) {
+        background-image: url('../images/desktop/image-from-above.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(6) {
+        background-image: url('../images/desktop/image-pocket-borealis.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(7) {
+        background-image: url('../images/desktop/image-curiosity.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .creation:nth-child(8) {
+        background-image: url('../images/desktop/image-fisheye.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .creation__title {
+        bottom: 2rem;
+        left: 2rem;
+        width: 70%;
+        font-size: 1.8rem;
+    }
+
+    .our-creations__btn2 {
+        display: none;
+    }
+
+
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+    }
+
+    .footer-container div:nth-child(1){
+        flex: 1;
+    }
+    .footer-container div:nth-child(2){
+        flex: 1;
+        text-align: end;
+    }
+
+    .footer__logo {
+        width: 12rem;
+    }
+
+    .footer__menu {
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-between;
+        
+    }
+
+    .footer__menu a {
+        font-size: 1.1rem;
+    }
+
+
+    .social-media {
+        justify-content: flex-end;
+        margin: 0 0 3.5rem;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1160px) {
+    .creation {
+        height: 32rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .hero {
+        justify-content: flex-start;
+        width: var(--width);
+        margin: auto;
+    }
+
+    .hero__title {
+        width: 70%;
+        padding: 4rem;
+        font-size: 6rem;
+    }
+
+    .about-us__info {
+        padding: 4rem 8rem 0;
+    }
+
+    .about-us__text {
+        font-size: 1.3rem;
+    }
+
+    .creations-container {
+        gap: 2.5rem;
+    }
+
+    .creation {
+        height: 35rem;
+    }
+
+    .creation__title {
+        bottom: 2rem;
+        left: 2rem;
+        width: 70%;
+        font-size: 2rem;
+    }
+
+    
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --width: 1440px;
+    }
+
+    .about-us__title {
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+
+    .hero__title {
+        width: 60%;
+        padding: 4rem;
+        font-size: 6rem;
+    }
+
+    .creation {
+        height: 41rem;
+    }
+
+    .creation__title {
+        bottom: 3.7rem;
+        left: 3.7rem;
+        width: 70%;
+        font-size: 2.5rem;
+    }
+
+    
+}
+
